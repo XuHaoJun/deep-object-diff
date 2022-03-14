@@ -23,9 +23,9 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.16.8",
-    "@babel/core": "^7.16.12",
+    "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
-    "babel-jest": "^27.4.6",
+    "babel-jest": "^27.5.1",
     "eslint": "^8.7.0",
     "jest": "^27.4.7",
     "prettier": "^2.5.1"
@@ -55,5 +55,10 @@
   "bugs": {
     "url": "https://github.com/mattphillips/deep-object-diff/issues"
   },
-  "homepage": "https://github.com/mattphillips/deep-object-diff#readme"
+  "homepage": "https://github.com/mattphillips/deep-object-diff#readme",
+  "dependencies": {
+    "flat": "^5.0.2",
+    "lodash.get": "^4.4.2",
+    "lodash.topath": "^4.5.2"
+  }
 }

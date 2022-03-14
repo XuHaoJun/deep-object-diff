@@ -268,6 +268,38 @@ console.log(detailedDiff(lhs, rhs));
 */
 ```
 
+## `changelogedDiff`
+
+antoher output format: changelog
+
+structure from: [github.com/r3labs/diff](https://github.com/r3labs/diff)
+
+```golang
+type Change struct {
+	Type string      // The type of change detected; can be one of create, update or delete
+	Path []string    // The path of the detected change; will contain any field name or array index that was part of the traversal
+	From interface{} // The original value that was present in the "from" structure
+	To   interface{} // The new value that was detected as a change in the "to" structure
+}
+
+type Changelog = []Change
+```
+
+```js
+const lhs = { a: { b: [[1, 2, 3, 4]] }, c: [], e: 'e' };
+const rhs = { a: { b: [[1, 2, 9999, 4]] }, c: 10, d: 'd' };
+
+console.log(changelogDiff(lhs, rhs));
+
+/*
+[
+  { type: 'create', path: ['d'], from: undefined, to: 'd' },
+  { type: 'delete', path: ['e'], from: 'e', to: undefined },
+  { type: 'update', path: ['a', 'b', '0', '2'], from: 3, to: 9999 },
+  { type: 'update', path: ['c'], from: [], to: 10 },
+]
+*/
+```
 
 ## License
 
