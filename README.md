@@ -38,10 +38,13 @@ A small library that can deep diff two JavaScript Objects, including nested stru
  - [`detailedDiff(original, updatedObj)`](#detaileddiff)
  returns an object with the added, deleted and updated differences
 
+ - [`changelogedDiff(original, updatedObj)`](#changelogeddiff)
+ returns an object with the added, deleted and updated differences in changelog format
+
 ## Importing
 
 ``` js
-import { diff, addedDiff, deletedDiff, updatedDiff, detailedDiff } from 'deep-object-diff';
+import { diff, addedDiff, deletedDiff, updatedDiff, detailedDiff, changelogedDiff } from 'deep-object-diff';
 ```
 
 ## Usage:
